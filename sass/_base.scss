@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+    @media only screen and (max-width: 600px) {
+        font-size: 47.5%;
+    }
+}
+
+$global-font-size: 2.1rem;
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 3rem;
+    min-height: 100vh;
+}

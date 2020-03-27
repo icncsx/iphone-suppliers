@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 3rem;
+  min-height: 100vh; }
+
+.container {
+  display: grid;
+  margin: 0 auto;
+  grid-row-gap: 4rem;
+  grid-column-gap: 1.5rem;
+  max-width: 110rem;
+  grid-template-columns: repeat(3, minmax(min-content, max-content)); }
+  @supports not (display: grid) {
+    .container {
+      display: none; } }
+  .container > * {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; }
+  @media only screen and (max-width: 500px) {
+    .container {
+      grid-template-columns: 70vw;
+      justify-content: center; } }
