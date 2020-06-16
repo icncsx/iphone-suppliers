@@ -24,13 +24,16 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/icncsx/iphone-suppliers.git"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "DH Kim",
+    "email": "icncsx@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/icncsx/iphone-suppliers/issues"
   },
   "homepage": ""
 }
