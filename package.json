@@ -2,7 +2,6 @@
   "name": "iphone-suppliers",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.7.5",
@@ -14,8 +13,8 @@
   },
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
+    "start": "live-server --open='./index.html'",
+    "devserver": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
@@ -26,7 +25,14 @@
     "type": "git",
     "url": "git+https://github.com/icncsx/iphone-suppliers.git"
   },
-  "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "iphone",
+    "d3",
+    "dataviz"
+  ],
   "author": {
     "name": "DH Kim",
     "email": "icncsx@gmail.com"
@@ -34,6 +40,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/icncsx/iphone-suppliers/issues"
-  },
-  "homepage": ""
+  }
 }
