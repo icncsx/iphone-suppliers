@@ -1,29 +1,49 @@
-# Kodash
+# iPhone Suppliers 📱
 
-This is a Lodash clone I built to learn how to create a utility library such as Lodash and Underscore.
+This is an expansion piece of Bloomberg Graphics' wildly popular ["What’s Inside All the iPhones"](https://www.bloomberg.com/features/apple-iphone-guts/). This project was my first forray into data journalism.
+
+## About
+
+Ever wondered what's inside an iPhone? You don't have to smash your phone. Someone already did, and I took a look inside. This is just a snippet of what you're about to see.
+
+![Image](./img/screenshot.png)
 
 ## Installation
 
 Using npm:
 
 ```
-npm install @icncsx/kodash
+npm install
 ```
 
-In Node.js:
+Start the app:
 
-```js
-import _ from "@icncsx/kodash"
-_.head([1,2,3,4]) // 1
+```
+npm start
 ```
 
-## API
+Visit your localhost:8080 and voila~ Enjoy the graphics! 📊 📉
 
-Functions mimic those which exist in [Lodash](https://lodash.com/) and [Underscore](https://underscorejs.org/).
+## Public URL
 
-Want to flatten an array? We got that. Want to remove an array of matching elements from an array. We also have that (✌️). 
+If you don't want to bother installing and locally hosting this application, I have great news for you. The project is also deployed on Netlify. Check out this [link](https://iphone-supply-chain.netlify.app/). 
 
-## Production
+## Methodology
 
-No no no! Use Lodash or Underscore if you want a battle tested utility library. This library is purposely derivative and redundant because I'm using it mainly for learning purposes.
+1. Download Apple's Annual [supplier list](https://www.apple.com/supplier-responsibility/pdf/Apple-Supplier-List.pdf). I wish it was a CSV, but PDF will do.
 
+2. Scrape the PDF. I used a Java program called Tabula to identify and parse most of the tables.
+
+3. Clean the data. Make sure the addresses are real.
+
+4. Use Google's [Geocoding](https://developers.google.com/maps/documentation/geocoding/) API to derive the lat lon coordinates.
+
+5. Validate the lat lon coordinates. Silly, Google! Shenzhen is not in Texas. Or is it? 
+
+6. Use [Pandas](https://github.com/pandas-dev/pandas) (🐼) library to conduct preliminary data analysis.
+
+7. Start graphing/coding!
+
+## Credits
+
+Many thanks to the people at Bloomberg, especially Max Chafkin and Ian King who published this wildly popular piece in the Fall of 2017. Their work has long been an inspiration to me, and I would like to thank them for their crisp images of each iPhone component that are the foundations for my own piece.
